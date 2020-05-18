@@ -7,6 +7,8 @@
                     <div class="box">
                         <h2 class="title is-4">Profile  </h2>
                         <form action="" method="post" accept-charset="UTF-8">
+                            {% csrf_token %}
+
                             <input name="authenticity_token" type="hidden">
                             <div class="field info-field is-horizontal">
                                 <div class="field-label">
@@ -32,7 +34,23 @@
                                 </div>
                                 <div class="field-body">
                                     {{user.account_balance}}
+
                                 </div>
+
+                            </div>
+
+                             <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Recharge</label>
+                                </div>
+                                <div class="field-body">
+
+                                        <div class="control" >
+                                            <input class="input" name="recharge" type="number" min="0" placeholder="$" value="">
+                                        </div>
+
+                                </div>
+
                             </div>
 
                             <div class="field info-field is-horizontal">
@@ -44,13 +62,22 @@
                                 </div>
                             </div>
 
+                            <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Skills</label>
+                                </div>
+                                <div class="field-body">
+                                    {{user.skills}}
+                                </div>
+                            </div>
+
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Skills</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field">
-                                        <div class="control"><textarea name="signature" class="textarea" id="signature" rows="4"></textarea>
+                                        <div class="control"><textarea name="skills" class="textarea" id="signature" rows="4"></textarea>
                                         </div>
                                         <p class="help">Will be shown on your public page</p>
                                     </div>
@@ -67,9 +94,6 @@
                                     </div>
                                 </div>
                             </div>
-{#                            <div class="content text-right">#}
-{#                                <a href="/profile/change_password">Change Password</a>#}
-{#                            </div>#}
                         </form>
                     </div>
                     <br>
@@ -105,14 +129,33 @@
                 </div>
                 <div class="column">
                     <h2 class="title is-4">Your History</h2>
+                    <h3 class="title is-5" > &nbsp posted tasks</h3>
                     {% for task in user.post_tasks %}
                         <div class="box">
-                        <h4 class="title is-5">{{task}}</h4>
-                        <p>{{ task.worker_requirement }}</p>
+                        <a class="title is-5" href="">{{task}}</a>
+                            <br><br>
+                        <p>release time: {{ task.deadline }}</p>
+                    </div>
+                    {% endfor %}
+
+                 <h3 class="title is-5" > &nbsp ongoing tasks</h3>
+                    {% for task in user.ongoing_tasks %}
+                        <div class="box">
+                        <a class="title is-5" href="/mytask/{{ task }}">{{task}}</a>
                         <br>
                         <p>release time: {{ task.deadline }}</p>
                     </div>
                     {% endfor %}
+
+                 <h3 class="title is-5" > &nbsp completed tasks</h3>
+                    {% for task in user.complete_tasks %}
+                        <div class="box">
+                        <a class="title is-5" href="">{{task}}</a>
+                        <br>
+                        <p>release time: {{ task.deadline }}</p>
+                    </div>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>

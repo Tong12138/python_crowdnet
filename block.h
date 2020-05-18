@@ -75,11 +75,21 @@ extern void Set();
 
 extern char* PostTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5);
 
+extern char* RecieveTask(char* p0);
+
+extern char* CommitTask(char* p0, char* p1);
+
 extern char* GetTask(char* p0);
 
 extern char* GetAllTasks();
 
 extern char* Register(char* p0, char* p1);
+
+extern char* Enroll(char* p0, char* p1, char* p2);
+
+extern char* Recharge(char* p0);
+
+extern char* AddSkills(char* p0);
 
 extern char* GetUser();
 

@@ -1,8 +1,8 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect, reverse
-from base.models import getAllTasks, login, postTask, getTask, getUser, getAllUsers
+from base.models import getAllTasks, login, postTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask
 import json
-from .form import registerForm, loginForm, challengeForm
+from .form import registerForm, loginForm, challengeForm, profileForm, commitForm
 class homeView(View):
     def get(self, request):
         tasks = getAllTasks()
@@ -39,14 +39,11 @@ class registerView(View):
         form = registerForm(request.POST or None)
         # form.register_time = datetime.datetime.now().strftime('%Y-%m-%d')
         if form.is_valid():
-            name = form.cleaned_data.get('Name')
-            # print(name)
-            name = bytes(name, encoding='utf-8')
-            info = form.cleaned_data.get('Info')
-            info = bytes(info, encoding='utf-8')
-            result = registerUser(name, info)
+            name = bytes(form.cleaned_data.get('Name'), encoding='utf-8')
+            password = bytes(form.cleaned_data.get('Password'), encoding='utf-8')
+            result = register(name, password)
             print(result)
-            return redirect(reverse('home'))
+            return redirect(reverse('login'))
         else:
             errors = form.errors
             print(errors)
@@ -63,10 +60,13 @@ class loginView(View):
         if form.is_valid():
             originname = form.cleaned_data.get('Name')
             name = bytes(originname, encoding='utf-8')
+            password = form.cleaned_data.get('Password')
+            password = bytes(password, encoding='utf-8')
             info = form.cleaned_data.get('Info')
             info = bytes(info, encoding='utf-8')
-            result = login(name, info)
+            result = login(name, password, info)
             result = str(result, 'utf-8')
+            print(result)
             if result[0] == '1':
                 request.session['user_id'] = originname
                 return redirect(reverse('home'))
@@ -98,6 +98,37 @@ class releaseView(View):
             print(form.errors.get_json_data())
             return redirect(reverse('release'))
 
+class profileView(View):
+    def get(self, request, userId):
+        user = getUser(bytes(userId, encoding='utf-8'))
+        try:
+            user = json.loads(str(user, 'utf-8'))
+        except Exception:
+            data = {
+                "title": "profile",
+                "user": str(user, 'utf-8'),
+            }
+        else:
+            data = {
+                "title": "profile",
+                "user": user,
+            }
+        return render(request, 'profile.html', context=data)
+    def post(self, request, userId):
+        form = profileForm(request.POST or None)
+        if form.is_valid():
+            recharge = form.cleaned_data.get('recharge')
+            skills= form.cleaned_data.get('skills')
+            if recharge != '':
+                result = rechargeUser(bytes(recharge, encoding='utf-8'))
+                print(result)
+            if skills != '':
+                result = addSkills(bytes(skills, encoding='utf-8'))
+                print(result)
+            return redirect('/profile/'+ userId)
+        else:
+            return redirect('/profile/'+ userId)
+
 def details(request):
     ch_id = request.session.get('chId')
     task = getTask(bytes(ch_id, encoding='utf-8'))
@@ -115,7 +146,6 @@ def details(request):
         }
     return render(request, 'details.html', context=data)
 
-
 def task(request, taskId):
     task = getTask(bytes(taskId, encoding='utf-8'))
     try:
@@ -130,16 +160,48 @@ def task(request, taskId):
             "title": "Details",
             "task": task,
         }
-    # data = {
-    #     "title": "TaskDetails",
-    #     "task": task,
-    #     # "hoster": task.hoster
-    # }
     return render(request, 'task.html', context=data)
+
+def jointask(request,taskId):
+    result = recieveTask(bytes(taskId, encoding='utf-8'))
+    result = str(result, 'utf-8')
+    if result[0] == '1':
+        return redirect('/profile/'+ request.session.get('user_id'))
+    else:
+        print(result)
+        return redirect('/profile/'+ request.session.get('user_id'))
+
+class mytaskView(View):
+    def get(self, request, taskId):
+        task = getTask(bytes(taskId, encoding='utf-8'))
+        try:
+            task = json.loads(str(task, 'utf-8'))
+        except Exception:
+            data = {
+                "title": "Mytask",
+                "task": str(task, 'utf-8'),
+            }
+        else:
+            data = {
+                "title": "Mytask",
+                "task": task,
+            }
+        return render(request, 'mytask.html', context=data)
+
+    def post(self, request, taskId):
+
+        form = commitForm(request.POST or None)
+        if form.is_valid():
+            solution = form.cleaned_data.get('solution')
+            result = commitTask(bytes(taskId, encoding='utf-8'),bytes(solution, encoding='utf-8'))
+            print(result)
+            return redirect('/profile/' + request.session.get('user_id'))
+        else:
+            print('not valid')
+            return redirect('/profile/' + request.session.get('user_id'))
 
 def profile(request, userId):
     user = getUser(bytes(userId, encoding='utf-8'))
-    # hist_chal = user.challenge_set.all()
     try:
         user = json.loads(str(user, 'utf-8'))
     except Exception:

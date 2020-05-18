@@ -16,11 +16,19 @@ def getAllUsers():
     getusers.restype = ctypes.c_char_p
     return getusers()
 
-def login(name, info):
-    registeruser = lib.Register
-    registeruser.restype = ctypes.c_char_p
-    registeruser.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
-    result= registeruser(name, info)
+def register(name, password):
+    register = lib.Register
+    register.restype = ctypes.c_char_p
+    register.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
+    result = register(name, password)
+    print(result)
+
+
+def login(name, password, info):
+    enrolluser = lib.Enroll
+    enrolluser.restype = ctypes.c_char_p
+    enrolluser.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+    result= enrolluser(name, password, info)
     # print('result', result)
     return result
 
@@ -31,9 +39,14 @@ def postTask(title, taskid, detail, require, reward):
 
     tasktype = bytes('one2one', encoding='utf-8')
     # detail =b ytes('detaildetaildetail', encoding='utf-8')
-    print(require)
     result = posttask(title, taskid, tasktype, detail, reward, require)
+    return result
 
+def recieveTask(taskid):
+    recievetask = lib.RecieveTask
+    recievetask.restype = ctypes.c_char_p
+    recievetask.argtypes = [ctypes.c_char_p]
+    result = recievetask(taskid)
     return result
 
 def getTask(taskid):
@@ -49,4 +62,25 @@ def getUser(userid):
     getuser.restype = ctypes.c_char_p
     # getuser.argtypes = [ctypes.c_char_p]
     result = getuser()
+    return result
+
+def rechargeUser(number):
+    rechargeuser = lib.Recharge
+    rechargeuser.restype = ctypes.c_char_p
+    rechargeuser.argtypes = [ctypes.c_char_p]
+    result = rechargeuser(number)
+    return result
+
+def addSkills(skills):
+    addskill = lib.AddSkills
+    addskill.restype = ctypes.c_char_p
+    addskill.argtypes = [ctypes.c_char_p]
+    result = addskill(skills)
+    return result
+
+def commitTask(taskid, solution):
+    committask = lib.CommitTask
+    committask.restype = ctypes.c_char_p
+    committask.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
+    result = committask(taskid, solution)
     return result

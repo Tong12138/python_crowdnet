@@ -5,19 +5,19 @@ import datetime
 
 class registerForm(forms.Form):
     Name = forms.CharField()
-    Info = forms.CharField()
+    Password = forms.CharField()
     def clean(self):
         cleaned_data = super(registerForm, self).clean()
-        print(cleaned_data)
         return cleaned_data
 
 class loginForm(forms.Form):
     Name = forms.CharField()
+    Password = forms.CharField()
     Info = forms.CharField()
+
 
     def clean(self):
         cleaned_data = super(loginForm, self).clean()
-        print(cleaned_data)
         return cleaned_data
 
 
@@ -30,4 +30,17 @@ class challengeForm(forms.Form):
 
     def clean(self):
         cleaned_data = super(challengeForm, self).clean()
+        return cleaned_data
+
+class profileForm(forms.Form):
+    recharge = forms.CharField(required=False)
+    skills = forms.CharField(required=False)
+    def clean(self):
+        cleaned_data = super(profileForm, self).clean()
+        return cleaned_data
+
+class commitForm(forms.Form):
+    solution = forms.CharField()
+    def clean(self):
+        cleaned_data = super(commitForm, self).clean()
         return cleaned_data

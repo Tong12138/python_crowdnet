@@ -20,7 +20,7 @@ from base import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', views.loginView.as_view(), name='login'),
+    # path('', views.loginView.as_view(), name='register'),
 
     path('', views.homeView.as_view(), name='home'),
     path('developer/', views.developerView.as_view(), name="developer"),
@@ -30,7 +30,9 @@ urlpatterns = [
     path('release/', views.releaseView.as_view(), name='release'),
     path('details/', views.details, name='details'),
     path('task/<taskId>', views.task, name='task'),
-    path('profile/<userId>', views.profile, name='profile'),
+    path('profile/<userId>', views.profileView.as_view(), name='profile'),
     path('logout/', views.logout, name='logout'),
+    path('jointask/<taskId>', views.jointask, name='jointask'),
+    path('mytask/<taskId>', views.mytaskView.as_view(), name='mytask'),
 
 ]
