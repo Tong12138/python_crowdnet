@@ -1,8 +1,8 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect, reverse
-from base.models import getAllTasks, login, postTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask
+from base.models import getAllTasks, login, enroll, postTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask, getRecord, reward
 import json
-from .form import registerForm, loginForm, challengeForm, profileForm, commitForm
+from .form import registerForm, loginForm, challengeForm, profileForm, commitForm, rewardForm
 class homeView(View):
     def get(self, request):
         tasks = getAllTasks()
@@ -41,7 +41,11 @@ class registerView(View):
         if form.is_valid():
             name = bytes(form.cleaned_data.get('Name'), encoding='utf-8')
             password = bytes(form.cleaned_data.get('Password'), encoding='utf-8')
+            info = form.cleaned_data.get('Info')
+            info = bytes(info, encoding='utf-8')
             result = register(name, password)
+            print(result)
+            result = enroll(name, password, info)
             print(result)
             return redirect(reverse('login'))
         else:
@@ -60,11 +64,11 @@ class loginView(View):
         if form.is_valid():
             originname = form.cleaned_data.get('Name')
             name = bytes(originname, encoding='utf-8')
-            password = form.cleaned_data.get('Password')
-            password = bytes(password, encoding='utf-8')
-            info = form.cleaned_data.get('Info')
-            info = bytes(info, encoding='utf-8')
-            result = login(name, password, info)
+            # password = form.cleaned_data.get('Password')
+            # password = bytes(password, encoding='utf-8')
+            # info = form.cleaned_data.get('Info')
+            # info = bytes(info, encoding='utf-8')
+            result = login(name)
             result = str(result, 'utf-8')
             print(result)
             if result[0] == '1':
@@ -148,17 +152,21 @@ def details(request):
 
 def task(request, taskId):
     task = getTask(bytes(taskId, encoding='utf-8'))
+    records = getRecord(bytes(taskId, encoding='utf-8'))
     try:
         task = json.loads(str(task, 'utf-8'))
+        records = json.loads(str(records, 'utf-8'))
     except Exception:
         data = {
             "title": "Details",
             "task": str(task, 'utf-8'),
+            "records": str(records, 'utf-8'),
         }
     else:
         data = {
             "title": "Details",
             "task": task,
+            "records": records,
         }
     return render(request, 'task.html', context=data)
 
@@ -199,6 +207,40 @@ class mytaskView(View):
         else:
             print('not valid')
             return redirect('/profile/' + request.session.get('user_id'))
+
+class rewardView(View):
+    def get(self, request, taskId):
+        task = getTask(bytes(taskId, encoding='utf-8'))
+        try:
+            task = json.loads(str(task, 'utf-8'))
+        except Exception:
+            data = {
+                "title": "Reward",
+                "task": str(task, 'utf-8'),
+            }
+        else:
+            data = {
+                "title": "Reward",
+                "task": task,
+            }
+        return render(request, 'reward.html', context=data)
+
+    def post(self, request, taskId):
+        form = rewardForm(request.POST or None)
+        if form.is_valid():
+            workerid = form.cleaned_data.get('workerid')+'\n'
+            rate = form.cleaned_data.get('rate')
+            workerid = bytes(workerid, encoding='utf-8')
+            print(workerid)
+            workerid = workerid.replace(b'\r\n', b'\n')
+            print(workerid)
+            result = reward(bytes(taskId, encoding='utf-8'), workerid,bytes(str(rate), encoding='utf-8'))
+            print(result)
+            return redirect('/profile/' + request.session.get('user_id'))
+        else:
+            print('not valid')
+            return redirect('/profile/' + request.session.get('user_id'))
+
 
 def profile(request, userId):
     user = getUser(bytes(userId, encoding='utf-8'))

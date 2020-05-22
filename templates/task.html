@@ -35,9 +35,19 @@
 
                             <h3 class="title is-5">Requirments</h3>
                             <p>{{ task.worker_requirement }}</p>
-                            {#                        <p>{{ hoster.username }}</p> #}
-                            {#                        <p>{{ hoster.email }}</p>#}
+
                             <br>
+
+                            <h3 class="title is-4">Work Record</h3>
+                            {% for record in records %}
+                                <h3 class="title is-5">Requester: {{ record.requester }}</h3>
+                                <h3 class="title is-5">Worker: {{ record.worker }}</h3>
+                                <h3 class="title is-5">Type: {{ record.type }}</h3>
+                                <h3 class="title is-5">PostTime: {{ record.time }}</h3>
+
+
+                                <br><br><br>
+                            {% endfor %}
                         </form>
                     </div>
 

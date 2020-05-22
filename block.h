@@ -79,13 +79,19 @@ extern char* RecieveTask(char* p0);
 
 extern char* CommitTask(char* p0, char* p1);
 
+extern char* AlloReward(char* p0, char* p1, char* p2);
+
 extern char* GetTask(char* p0);
+
+extern char* GetRecord(char* p0);
 
 extern char* GetAllTasks();
 
 extern char* Register(char* p0, char* p1);
 
 extern char* Enroll(char* p0, char* p1, char* p2);
+
+extern char* Login(char* p0);
 
 extern char* Recharge(char* p0);
 

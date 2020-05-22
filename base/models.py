@@ -24,13 +24,20 @@ def register(name, password):
     print(result)
 
 
-def login(name, password, info):
+def enroll(name, password, info):
     enrolluser = lib.Enroll
     enrolluser.restype = ctypes.c_char_p
     enrolluser.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
     result= enrolluser(name, password, info)
-    # print('result', result)
     return result
+
+def login(name):
+    loginuser = lib.Login
+    loginuser.restype = ctypes.c_char_p
+    loginuser.argtypes = [ctypes.c_char_p]
+    result = loginuser(name)
+    return result
+
 
 def postTask(title, taskid, detail, require, reward):
     posttask = lib.PostTask
@@ -56,6 +63,12 @@ def getTask(taskid):
     result = gettask(taskid)
     return result
 
+def getRecord(taskid):
+    getrecord = lib.GetRecord
+    getrecord.restype = ctypes.c_char_p
+    getrecord.argtypes = [ctypes.c_char_p]
+    result = getrecord(taskid)
+    return result
 
 def getUser(userid):
     getuser = lib.GetUser
@@ -83,4 +96,12 @@ def commitTask(taskid, solution):
     committask.restype = ctypes.c_char_p
     committask.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
     result = committask(taskid, solution)
+    return result
+
+
+def reward(taskid, workerid, rate):
+    alloreward = lib.AlloReward
+    alloreward.restype = ctypes.c_char_p
+    alloreward.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+    result = alloreward(taskid, workerid, rate)
     return result

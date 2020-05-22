@@ -24,19 +24,24 @@
 
                             <h3 class="title is-5">Type: {{ task.task_type }}</h3>
 
-                            <h3 class="title is-5">Detail {{ task.state }}</h3>
+                            <h3 class="title is-5">State: {{ task.state }}</h3>
 
-                            <h3 class="title is-5">Detail {{ task.detail }}</h3>
+                            <h3 class="title is-5">Detail: {{ task.detail }}</h3>
 
 
                             <h3 class="title is-5">Reward: {{ task.reward }}</h3>
 
-                            <h3 class="title is-5">Recieve Time: {{ task.receive_time }}</h3>
+                            <h3 class="title is-5">Worker: {{ task.final_worker }}</h3>
                             <h3 class="title is-5">Deadline: {{ task.deadline }}</h3>
 
                             <h3 class="title is-5">Requirments</h3>
                             <p>{{ task.worker_requirement }}</p>
-
+                        <br>
+                            {% if task.final_solution %}
+                            <h3 class="title is-5">FinalSolution</h3>
+                            <p>{{ task.final_solution }}</p>
+                                <br>
+                            {% else %}
                              <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Solutions</label>
@@ -55,6 +60,7 @@
                                             <input class="button is-primary" type="submit" value="Commit">
                                         </div>
                              </div>
+                            {% endif %}
 
                           <br>
                         </form>

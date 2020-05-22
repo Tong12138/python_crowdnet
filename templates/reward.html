@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-three-fifths is-offset-one-fifth">
+                    <div class="box">
+                        <form action="/reward/{{ task.id }}" method="post" accept-charset="UTF-8">
+                            {% csrf_token %}
+
+                            <div class="columns">
+                                <div class="column is-three-quarters">
+                                    <h3 class="title is-4">{{ task.name }} </h3>
+                                </div>
+
+                            </div>
+
+
+                            <h3 class="title is-5">Type: {{ task.task_type }}</h3>
+
+                            <h3 class="title is-5">State {{ task.state }}</h3>
+
+                            <h3 class="title is-5">Detail {{ task.detail }}</h3>
+
+
+                            <h3 class="title is-5">Reward: {{ task.reward }}</h3>
+
+                            <h3 class="title is-5">Recieve Time: {{ task.receive_time }}</h3>
+                            <h3 class="title is-5">Deadline: {{ task.deadline }}</h3>
+
+                            <h3 class="title is-5">Worker: {{ task.final_worker }}</h3>
+
+
+                            <h3 class="title is-5">Requirments:{{ task.worker_requirement }}</h3>
+                            <p></p>
+
+                            {% if task.final_solution %}
+
+                            <h3 class="title is-5">Solution:</h3>
+                            <p>{{ task.final_solution }}</p>
+
+                             <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Reward Rate</label>
+                                </div>
+                                <div class="field-body">
+
+                                        <div class="control" >
+                                            <input type="hidden"  name="workerid" value="{{ task.final_worker }}">
+                                            <input class="input" name="rate" type="number" min="0"  placeholder="rate 0-100" value="">
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                             <div class="field" align="center">
+                                        <div class="control">
+                                            <input class="button is-primary" type="submit" value="Reward">
+                                        </div>
+                             </div>
+                            {% endif %}
+
+                          <br>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

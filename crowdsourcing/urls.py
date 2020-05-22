@@ -34,5 +34,7 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     path('jointask/<taskId>', views.jointask, name='jointask'),
     path('mytask/<taskId>', views.mytaskView.as_view(), name='mytask'),
+    path('reward/<taskId>', views.rewardView.as_view(), name='reward'),
+
 
 ]
