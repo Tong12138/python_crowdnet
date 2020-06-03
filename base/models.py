@@ -1,4 +1,5 @@
 import ctypes
+from ctypes import cdll
 
 lib = ctypes.CDLL('block.so')
 
@@ -39,11 +40,11 @@ def login(name):
     return result
 
 
-def postTask(title, taskid, detail, require, reward):
+def postTask(title, taskid, detail, require, reward, data, keypath):
     posttask = lib.PostTask
     posttask.restype = ctypes.c_char_p
-    posttask.argtypes = [ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p]
-
+    posttask.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p]
+    detail = bytes(str(detail, 'utf-8') + "\nData hash:" + str(upLoad(data, keypath), 'utf-8'), encoding='utf-8')
     tasktype = bytes('one2one', encoding='utf-8')
     # detail =b ytes('detaildetaildetail', encoding='utf-8')
     result = posttask(title, taskid, tasktype, detail, reward, require)
@@ -91,11 +92,12 @@ def addSkills(skills):
     result = addskill(skills)
     return result
 
-def commitTask(taskid, solution):
+def commitTask(taskid, solution, keypath):
     committask = lib.CommitTask
     committask.restype = ctypes.c_char_p
     committask.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
-    result = committask(taskid, solution)
+    Hash = upLoad(solution, keypath)
+    result = committask(taskid, Hash)
     return result
 
 
@@ -104,4 +106,18 @@ def reward(taskid, workerid, rate):
     alloreward.restype = ctypes.c_char_p
     alloreward.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
     result = alloreward(taskid, workerid, rate)
+    return result
+
+def upLoad(filepath, keypath):
+    upload = cdll.LoadLibrary('ipfs.so').UploadIPFS
+    upload.restype = ctypes.c_char_p
+    upload.argtype = [ctypes.c_char_p, ctypes.c_char_p]
+    result = upload(filepath, keypath)
+    return result
+
+def downLoad(hash, filepath):
+    download = cdll.LoadLibrary('ipfs.so').CatIPFS
+    download.restype = ctypes.c_char_p
+    download.argtype = [ctypes.c_char_p, ctypes.c_char_p]
+    result = download(hash, filepath)
     return result

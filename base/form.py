@@ -27,6 +27,8 @@ class challengeForm(forms.Form):
     detail = forms.CharField()
     award = forms.IntegerField(min_value=0)
     requirment = forms.CharField()
+    data = forms.CharField()
+    public_key = forms.CharField()
 
 
     def clean(self):

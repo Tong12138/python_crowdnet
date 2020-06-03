@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="hero is-info is-light">
+  <div class="hero-body">
+      <div class="columns">
+          <div class="column is-10 is-offset-1">
+              <section class="hero landing-left">
+                      <div>
+                          <h3 class="title has-text-centered ">
+                              <p>Make Things Easier!</p>
+                          </h3>
+                      </div>
+              </section>
+          </div>
+      </div>
+  </div>
+  </div>
+  </section>
+    <div class="section">
+        <div class="container">
+            <li class="box">
+                <div class="columns is-centered">
+                    <div class="column is-half-desktop is-two-thirds-tablet">
+                        <form class="" action="" method="post" accept-charset="UTF-8">
+                            {% csrf_token %}
+{#                            <input name="authenticity_token" type="hidden" value="">#}
+                            <br>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Data</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" name="filepath" type="text" placeholder="give the filepath of data" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="button is-success" type="submit" value="Submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="title is-5">Hash: {{ hash }}</h3>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </div>
+      </div>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect, reverse
-from base.models import getAllTasks, login, enroll, postTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask, getRecord, reward
+from base.models import getAllTasks, login, enroll, postTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask, getRecord, reward, downLoad
 import json
 from .form import registerForm, loginForm, challengeForm, profileForm, commitForm, rewardForm
 class homeView(View):
@@ -92,9 +92,11 @@ class releaseView(View):
             detail = bytes(form.cleaned_data.get('detail'), encoding='utf-8')
             reward = bytes(str(form.cleaned_data.get('award')), encoding='utf-8')
             requirement = bytes(form.cleaned_data.get('requirment'), encoding='utf-8')
+            data = bytes(form.cleaned_data.get('data'), encoding='utf-8')
             id = request.session.get('user_id') + form.cleaned_data.get('title')
             taskid = bytes(id, encoding='utf-8')
-            result = postTask(title, taskid, detail, requirement, reward)
+            publickeypath = bytes(form.cleaned_data.get('public_key'), encoding='utf-8')
+            result = postTask(title, taskid, detail, requirement, reward, data, publickeypath)
             request.session['chId'] = id
             print(result)
             return redirect(reverse('details'))
@@ -201,7 +203,8 @@ class mytaskView(View):
         form = commitForm(request.POST or None)
         if form.is_valid():
             solution = form.cleaned_data.get('solution')
-            result = commitTask(bytes(taskId, encoding='utf-8'),bytes(solution, encoding='utf-8'))
+            publickey = bytes(form.cleaned_data.get('public_key'), encoding='utf-8')
+            result = commitTask(bytes(taskId, encoding='utf-8'),bytes(solution, encoding='utf-8'), publickey)
             print(result)
             return redirect('/profile/' + request.session.get('user_id'))
         else:
@@ -264,3 +267,11 @@ def profile(request, userId):
 def logout(request):
     request.session.flush()
     return redirect(reverse('home'))
+
+def download(request):
+    if request.method == "POST":
+        index = bytes(request.POST.get('hash'), encoding='utf-8')
+        filepath = bytes(request.POST.get('filepath'), encoding='utf-8')
+        text = str(downLoad(index, filepath), 'utf-8')
+        return render(request, 'download.html', {'context': text})
+    return render(request, 'download.html', {'context': ""})

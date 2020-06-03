@@ -47,19 +47,40 @@
                                     <label class="label">Solutions</label>
                                 </div>
                                 <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <textarea class="textarea" name="solution" placeholder="your solution"></textarea>
-                                        </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" name="solution" type="text" placeholder="give the filepath of solution" value="">
                                     </div>
                                 </div>
-                            </div>
+                                </div>
+                                 {#  #}
+                                   {# <textarea class="textarea" name="solution" placeholder="your solution"></textarea> #}
+                             </div>
+                             <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Public Key</label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" name="public_key" type="text" placeholder="give the filepath of public key" value="">
+                                    </div>
+                                </div>
+                                </div>
+                                 {#  #}
+                                   {# <textarea class="textarea" name="solution" placeholder="your solution"></textarea> #}
+                             </div>
 
                              <div class="field" align="center">
                                         <div class="control">
                                             <input class="button is-primary" type="submit" value="Commit">
                                         </div>
                              </div>
+                                <div class="field" align="center">
+                                        <div class="control">
+                                            <a class="button is-primary" href="/download">download solution</a>
+                                        </div>
+                                </div>
                             {% endif %}
 
                           <br>

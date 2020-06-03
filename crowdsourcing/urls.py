@@ -36,5 +36,8 @@ urlpatterns = [
     path('mytask/<taskId>', views.mytaskView.as_view(), name='mytask'),
     path('reward/<taskId>', views.rewardView.as_view(), name='reward'),
 
+    # path('upload/', views.upload, name='upload'),
+    path('download/', views.download, name='download'),
+
 
 ]
