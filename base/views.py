@@ -1,8 +1,8 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect, reverse
-from base.models import getAllTasks, login, enroll, postTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask, getRecord, reward, downLoad
+from base.models import getAllTasks, login, enroll, postTask, postPriTask, getTask, getUser, getAllUsers, register, rechargeUser, addSkills, recieveTask, commitTask, getRecord, reward, downLoad
 import json
-from .form import registerForm, loginForm, challengeForm, profileForm, commitForm, rewardForm
+from .form import registerForm, loginForm, taskForm, profileForm, commitForm, rewardForm
 class homeView(View):
     def get(self, request):
         tasks = getAllTasks()
@@ -86,23 +86,46 @@ class releaseView(View):
     def get(self, request):
         return render(request, 'release.html')
     def post(self, request):
-        form = challengeForm(request.POST or None)
+        form = taskForm(request.POST or None)
+        if form.is_valid():
+            title = bytes(form.cleaned_data.get('title'), encoding='utf-8')
+            type = bytes(form.cleaned_data.get('type'),encoding='utf-8')
+            detail = bytes(form.cleaned_data.get('detail'), encoding='utf-8')
+            reward = bytes(str(form.cleaned_data.get('award')), encoding='utf-8')
+            requirement = bytes(form.cleaned_data.get('requirment'), encoding='utf-8')
+            data = bytes(form.cleaned_data.get('data'), encoding='utf-8')
+            taskid = bytes(request.session.get('user_id') + form.cleaned_data.get('title'),encoding='utf-8')
+            publickeypath = bytes(form.cleaned_data.get('public_key'), encoding='utf-8')
+            result = postTask(title, taskid, type, detail, requirement, reward, data, publickeypath)
+            request.session['chId'] = request.session.get('user_id') + form.cleaned_data.get('title')
+            return redirect(reverse('details'))
+        else:
+            print(form.errors.get_json_data())
+            return redirect(reverse('release'))
+
+
+class privateView(View):
+    def get(self, request):
+        return render(request, 'private.html')
+    def post(self, request):
+        form = taskForm(request.POST or None)
         if form.is_valid():
             title = bytes(form.cleaned_data.get('title'), encoding='utf-8')
             detail = bytes(form.cleaned_data.get('detail'), encoding='utf-8')
             reward = bytes(str(form.cleaned_data.get('award')), encoding='utf-8')
             requirement = bytes(form.cleaned_data.get('requirment'), encoding='utf-8')
             data = bytes(form.cleaned_data.get('data'), encoding='utf-8')
-            id = request.session.get('user_id') + form.cleaned_data.get('title')
-            taskid = bytes(id, encoding='utf-8')
+            userid = request.session.get('user_id')
+            taskid = bytes(userid+ form.cleaned_data.get('title'), encoding='utf-8')
             publickeypath = bytes(form.cleaned_data.get('public_key'), encoding='utf-8')
-            result = postTask(title, taskid, detail, requirement, reward, data, publickeypath)
-            request.session['chId'] = id
+            userid = bytes(userid, encoding='utf-8')
+            result = postPriTask(title, taskid, detail, requirement, reward, data, publickeypath, userid)
+            request.session['chId'] =userid+ form.cleaned_data.get('title')
             print(result)
             return redirect(reverse('details'))
         else:
             print(form.errors.get_json_data())
-            return redirect(reverse('release'))
+            return redirect(reverse('private'))
 
 class profileView(View):
     def get(self, request, userId):

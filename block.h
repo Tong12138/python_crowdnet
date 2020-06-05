@@ -75,6 +75,8 @@ extern void Set();
 
 extern char* PostTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5);
 
+extern char* PostPriTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5, char* p6);
+
 extern char* RecieveTask(char* p0);
 
 extern char* CommitTask(char* p0, char* p1);

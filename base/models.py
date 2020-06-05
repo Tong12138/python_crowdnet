@@ -40,14 +40,22 @@ def login(name):
     return result
 
 
-def postTask(title, taskid, detail, require, reward, data, keypath):
+def postTask(title, taskid, tasktype, detail, require, reward, data, keypath):
     posttask = lib.PostTask
     posttask.restype = ctypes.c_char_p
     posttask.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p]
     detail = bytes(str(detail, 'utf-8') + "\nData hash:" + str(upLoad(data, keypath), 'utf-8'), encoding='utf-8')
-    tasktype = bytes('one2one', encoding='utf-8')
     # detail =b ytes('detaildetaildetail', encoding='utf-8')
     result = posttask(title, taskid, tasktype, detail, reward, require)
+    return result
+
+def postPriTask(title, taskid, tasktype,detail, require, reward, data, keypath, userid):
+    posttask = lib.PostPriTask
+    posttask.restype = ctypes.c_char_p
+    posttask.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p]
+    detail = bytes(str(detail, 'utf-8') + "\nData hash:" + str(upLoad(data, keypath), 'utf-8'), encoding='utf-8')
+    tasktype = bytes('private', encoding='utf-8')
+    result = posttask(title, taskid, tasktype, detail, reward, require,userid)
     return result
 
 def recieveTask(taskid):

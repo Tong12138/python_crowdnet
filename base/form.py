@@ -22,8 +22,9 @@ class loginForm(forms.Form):
         return cleaned_data
 
 
-class challengeForm(forms.Form):
+class taskForm(forms.Form):
     title = forms.CharField()
+    type = forms.CharField()
     detail = forms.CharField()
     award = forms.IntegerField(min_value=0)
     requirment = forms.CharField()
@@ -32,7 +33,7 @@ class challengeForm(forms.Form):
 
 
     def clean(self):
-        cleaned_data = super(challengeForm, self).clean()
+        cleaned_data = super(taskForm, self).clean()
         return cleaned_data
 
 class profileForm(forms.Form):
