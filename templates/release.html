@@ -21,7 +21,7 @@
             <li class="box">
                 <div class="columns is-centered">
                     <div class="column is-half-desktop is-two-thirds-tablet">
-                        <form class="" action="" method="post" accept-charset="UTF-8">
+                        <form class="" action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                             {% csrf_token %}
                             <p>Release a One2One Task or
                                 <a class="text-next-to-button" href="/private">a private task</a>
@@ -86,37 +86,79 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
-                                    <label class="label">Requirment</label>
+                                    <label class="label">Recievetime</label>
                                 </div>
-                                <div class="field-body" >
-{#                                    <div class="field is-horizontal">#}
-{#                                        <div class="field-label is-normal">#}
-{#                                            <label class="label">Reputation</label>#}
-{#                                        </div>#}
-{#                                        <div class="field-body">#}
-{#                                            <div class="control">#}
-{#                                                <input name="reputation" class="input" type="number" min="0" placeholder="reputation"#}
-{#                                                       value="">#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{##}
-{#                                    <div class="field is-horizontal">#}
-{#                                        <div class="field-label is-normal">#}
-{#                                            <label class="label">Others</label>#}
-{#                                        </div>#}
-                                        <div class="field">
-                                            <div class="control">
-                                            <textarea class="textarea" name="requirment"
-                                                      placeholder="detailed requirments"></textarea>
-                                            </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" name="recievetime" type="datetime-local" step="1"
+                                                   value="">
                                         </div>
-
                                     </div>
                                 </div>
-{#                            </div>#}
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Deadline</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" name="deadline" type="datetime-local" step="1"
+                                                   value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Require</label>
+                                </div>
+                                <div class="field-body">
+                                    {#                                    <div class="field is-horizontal">#}
+                                    {#                                        <div class="field-label is-normal">#}
+                                    {#                                            <label class="label">Reputation</label>#}
+                                    {#                                        </div>#}
+                                    {#                                        <div class="field-body">#}
+                                    {#                                            <div class="control">#}
+                                    {#                                                <input name="reputation" class="input" type="number" min="0" placeholder="reputation"#}
+                                    {#                                                       value="">#}
+                                    {#                                            </div>#}
+                                    {#                                        </div>#}
+                                    {#                                    </div>#}
+                                    {##}
+                                    {#                                    <div class="field is-horizontal">#}
+                                    {#                                        <div class="field-label is-normal">#}
+                                    {#                                            <label class="label">Others</label>#}
+                                    {#                                        </div>#}
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea class="textarea" name="requirment"
+                                                      placeholder="detailed requirments"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            {#                            </div>#}
+                            {#                            <div class="field is-horizontal">#}
+                            {#                                <div class="field-label is-normal">#}
+                            {#                                    <label class="label">Data</label>#}
+                            {#                                </div>#}
+                            {#                                <div class="field-body">#}
+                            {#                                    <div class="field">#}
+                            {#                                        <div class="control">#}
+                            {#                                            <input class="input" name="data" type="text"#}
+                            {#                                                   placeholder="give the filepath of data" value="">#}
+                            {#                                        </div>#}
+                            {#                                    </div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Data</label>
@@ -124,15 +166,29 @@
                                 <div class="field-body">
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input" name="data" type="text"
-                                                   placeholder="give the filepath of data" value="">
+                                            <input class="input" name="data" type="file"
+                                                   value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Encryption</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="radio" name="flag" value="yes"/> yes
+                                            <input type="radio" name="flag" value="no"/> no
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
-                                    <label class="label">Public Key</label>
+                                    <label class="label">Public_Key</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field">

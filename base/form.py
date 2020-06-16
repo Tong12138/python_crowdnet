@@ -13,10 +13,6 @@ class registerForm(forms.Form):
 
 class loginForm(forms.Form):
     Name = forms.CharField()
-    # Password = forms.CharField()
-    # Info = forms.CharField()
-
-
     def clean(self):
         cleaned_data = super(loginForm, self).clean()
         return cleaned_data
@@ -27,10 +23,14 @@ class taskForm(forms.Form):
     type = forms.CharField()
     detail = forms.CharField()
     award = forms.IntegerField(min_value=0)
+    recievetime = forms.CharField()
+    deadline = forms.CharField()
     requirment = forms.CharField()
-    data = forms.CharField()
+    # data = forms.CharField()
+    data = forms.FileField()
+    flag = forms.CharField()
     public_key = forms.CharField()
-
+    # flag = forms.CharField()
 
     def clean(self):
         cleaned_data = super(taskForm, self).clean()
@@ -45,6 +45,7 @@ class profileForm(forms.Form):
 
 class commitForm(forms.Form):
     solution = forms.CharField()
+    public_key = forms.CharField()
     def clean(self):
         cleaned_data = super(commitForm, self).clean()
         return cleaned_data

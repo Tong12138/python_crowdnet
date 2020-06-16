@@ -19,7 +19,7 @@ class FrontUserMiddleware(object):
                 try:
                     # user = User.objects.get(pk=user_id)
                     request.front_user = user_id
-                    print(request.front_user)
+                    # print(request.front_user)
                 except:
                     return redirect(reverse('login'))
             else:

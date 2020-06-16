@@ -57,7 +57,7 @@
 
                              <div class="field" align="center">
                                         <div class="control">
-                                            <input class="button is-primary" type="submit" value="Reward">
+                                            <input class="button is-primary" type="submit" name="reward" value="Reward">
                                         </div>
                              </div>
                                 <div class="field" align="center">
@@ -65,6 +65,57 @@
                                             <a class="button is-primary" href="/download">download solution</a>
                                         </div>
                                 </div>
+                                {% else %}
+                                <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Data</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" name="data" type="text"
+                                                   placeholder="give the filepath of data" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Encryption</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="radio" name="flag" /> yes
+                                            <input type="radio" name="flag" /> no
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Public Key</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" name="public_key" type="text"
+                                                   placeholder="give the filepath of public key" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="button is-success" type="submit" name="update" value="Update">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             {% endif %}
 
                           <br>

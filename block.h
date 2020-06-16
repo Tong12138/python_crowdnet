@@ -73,7 +73,13 @@ extern void Start();
 
 extern void Set();
 
-extern char* PostTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5);
+extern char* Register(char* p0, char* p1);
+
+extern char* Enroll(char* p0, char* p1, char* p2);
+
+extern char* Login(char* p0);
+
+extern char* PostTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5, char* p6, char* p7);
 
 extern char* PostPriTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5, char* p6);
 
@@ -89,12 +95,6 @@ extern char* GetRecord(char* p0);
 
 extern char* GetAllTasks();
 
-extern char* Register(char* p0, char* p1);
-
-extern char* Enroll(char* p0, char* p1, char* p2);
-
-extern char* Login(char* p0);
-
 extern char* Recharge(char* p0);
 
 extern char* AddSkills(char* p0);
@@ -102,6 +102,8 @@ extern char* AddSkills(char* p0);
 extern char* GetUser();
 
 extern char* GetAllUsers();
+
+extern char* UpdateTask(char* p0, char* p1);
 
 #ifdef __cplusplus
 }
