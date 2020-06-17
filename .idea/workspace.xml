@@ -2,31 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="500bdb21-7ff9-46d5-ab79-6dcf6c662a27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo" beforeDir="false" afterPath="$PROJECT_DIR$/Demo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/simpleCC.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/simpleCC.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/simpleCC.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/deprecated.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/deprecated.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/equal.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/equal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/extensions.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/extensions.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/lib.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/lib.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/message_set.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/message_set.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_reflect.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_reflect.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/properties.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/properties.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_marshal.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_marshal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_unmarshal.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_unmarshal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/empty/empty.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/empty/empty.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/struct/struct.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/struct/struct.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/wrappers/wrappers.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/wrappers/wrappers.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/attrmgr/attrmgr.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid/cid.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid/interfaces.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/identities.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/identities.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_config.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_config.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_principal.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_principal.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_principal.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/stack.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/fixtures/base/docker-compose-base.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/fixtures/base/docker-compose-base.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/fixtures/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/fixtures/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/sdkInit/start.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/sdkInit/start.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/service/SimpleService.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/service/SimpleService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_examples_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_examples_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/block.h" beforeDir="false" afterPath="$PROJECT_DIR$/block.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/block.so" beforeDir="false" afterPath="$PROJECT_DIR$/block.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ipfs.h" beforeDir="false" afterPath="$PROJECT_DIR$/ipfs.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipfs.so" beforeDir="false" afterPath="$PROJECT_DIR$/ipfs.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_private.pem" beforeDir="false" afterPath="$PROJECT_DIR$/local_private.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/download.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/download.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/release.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/release.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reward.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yyt_PublicKey.pem" beforeDir="false" afterPath="$PROJECT_DIR$/yyt_PublicKey.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zs_PublicKey.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local_private.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,14 +89,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-106">
-              <caret line="107" selection-start-line="106" selection-end-line="107" />
+            <state relative-caret-position="242">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/task.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="105" column="57" lean-forward="true" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -113,8 +173,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/release.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2490">
-              <caret line="166" column="55" selection-start-line="166" selection-start-column="55" selection-end-line="166" selection-end-column="55" />
+            <state relative-caret-position="2595">
+              <caret line="173" column="34" selection-start-line="161" selection-start-column="27" selection-end-line="173" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -187,7 +247,6 @@
         <option value="$PROJECT_DIR$/templates/developers.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/profile.html" />
-        <option value="$PROJECT_DIR$/templates/task.html" />
         <option value="$PROJECT_DIR$/Demo/sdkInit/start.go" />
         <option value="$PROJECT_DIR$/templates/private.html" />
         <option value="$PROJECT_DIR$/crowdsourcing/urls.py" />
@@ -206,11 +265,13 @@
         <option value="$PROJECT_DIR$/templates/release.html" />
         <option value="$PROJECT_DIR$/base/form.py" />
         <option value="$PROJECT_DIR$/base/views.py" />
+        <option value="$PROJECT_DIR$/templates/task.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="-108" />
+    <option name="y" value="84" />
     <option name="width" value="1248" />
     <option name="height" value="803" />
   </component>
@@ -220,6 +281,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,7 +298,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,12 +406,14 @@
       <workItem from="1592188720481" duration="5122000" />
       <workItem from="1592205448497" duration="4368000" />
       <workItem from="1592226468027" duration="2242000" />
-      <workItem from="1592275146998" duration="457000" />
+      <workItem from="1592275146998" duration="5062000" />
+      <workItem from="1592293499901" duration="1750000" />
+      <workItem from="1592370231827" duration="2686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194168000" />
+    <option name="totallyTimeSpent" value="203209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,14 +425,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1248" height="803" extended-state="0" />
+    <frame x="-108" y="84" width="1248" height="803" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23797679" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24543947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3291874" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8898426" weight="0.25457102" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8898426" visible="true" weight="0.5555556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,20 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="82" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/opt/anaconda3/envs/myEnv/lib/python3.7/site-packages/pymysql/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1545">
@@ -548,13 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -708,13 +751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="107" selection-start-line="106" selection-end-line="107" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -754,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/release.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="166" column="55" selection-start-line="166" selection-start-column="55" selection-end-line="166" selection-end-column="55" />
+        <state relative-caret-position="2595">
+          <caret line="173" column="34" selection-start-line="161" selection-start-column="27" selection-end-line="173" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -766,6 +806,30 @@
           <folding>
             <element signature="e#46#70#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="105" column="57" lean-forward="true" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
         </state>
       </provider>
     </entry>

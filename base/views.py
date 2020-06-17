@@ -116,7 +116,7 @@ class releaseView(View):
                 messages.error(request, result[1:])
                 return  redirect(reverse('release'))
         else:
-            print(form.errors.get_json_data())
+            # print(form.errors.get_json_data())
             messages.error(request, form.errors)
             return redirect(reverse('release'))
 
@@ -209,6 +209,7 @@ def task(request, taskId):
         task = json.loads(str(task, 'utf-8'))
         records = json.loads(str(records, 'utf-8'))
     except Exception:
+        messages.error(request, "获取数据错误")
         data = {
             "title": "Details",
             "task": str(task, 'utf-8'),

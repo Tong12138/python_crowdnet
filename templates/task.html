@@ -22,19 +22,68 @@
                             </div>
 
 
-                            <h3 class="title is-5">Type: {{ task.task_type }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Type:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.task_type }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Detail {{ task.detail }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">State:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.state }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">State: {{ task.state }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Reward:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.reward }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Reward: {{ task.reward }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Receive Time:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.receive_time }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Recieve Time: {{ task.receive_time }}</h3>
-                            <h3 class="title is-5">Deadline: {{ task.deadline }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Deadline:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.deadline }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Requirments</h3>
-                            <p>{{ task.worker_requirement }}</p>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Detail:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.detail }}
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Requirements:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.worker_requirement}}
+                                </div>
+                            </div>
 
                             <br>
 
@@ -50,15 +99,15 @@
                             {% endfor %}
                         </form>
                         <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <a class="button" href="/download">download data</a>
-                                        </div>
+                            <div class="field-label is-normal">
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <a class="button" href="/download">download data</a>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
 
