@@ -5,12 +5,12 @@
             <div class="columns">
                 <div class="column is-three-fifths is-offset-one-fifth">
                     <div class="box">
-                        <form action="/jointask/{{ task.id }}" method="post" accept-charset="UTF-8">
+                        <form action="/jointask/{{ task.task_id }}" method="post" accept-charset="UTF-8">
                             {% csrf_token %}
 
                             <div class="columns">
                                 <div class="column is-three-quarters">
-                                    <h3 class="title is-4">{{ task.name }} </h3>
+                                    <h3 class="title is-4">{{ task.task_name }} </h3>
                                 </div>
                                 <div class="column">
                                     <div class="field">
@@ -69,6 +69,15 @@
 
                             <div class="field is-horizontal">
                                 <div class="field-body">
+                                    <label class="label">Requirements:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.worker_requirement }}
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
                                     <label class="label">Detail:</label>
                                 </div>
                                 <div class="field-body ">
@@ -76,35 +85,55 @@
                                 </div>
                             </div>
 
-                            <div class="field is-horizontal">
-                                <div class="field-body">
-                                    <label class="label">Requirements:</label>
-                                </div>
-                                <div class="field-body ">
-                                    {{ task.worker_requirement}}
-                                </div>
-                            </div>
-
-                            <br>
+                            <br><br>
 
                             <h3 class="title is-4">Work Record</h3>
                             {% for record in records %}
-                                <h3 class="title is-5">Requester: {{ record.requester }}</h3>
-                                <h3 class="title is-5">Worker: {{ record.worker }}</h3>
-                                <h3 class="title is-5">Type: {{ record.type }}</h3>
-                                <h3 class="title is-5">PostTime: {{ record.time }}</h3>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <label class="label">Requester:</label>
+                                    </div>
+                                    <div class="field-body ">
+                                        {{ record.requester }}
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <label class="label">Worker:</label>
+                                    </div>
+                                    <div class="field-body ">
+                                        {{ record.worker }}
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <label class="label">Type:</label>
+                                    </div>
+                                    <div class="field-body ">
+                                        {{ record.type }}
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <label class="label">Time:</label>
+                                    </div>
+                                    <div class="field-body ">
+                                        {{ record.time }}
+                                    </div>
+                                </div>
 
-
-                                <br><br><br>
+                                <br>
                             {% endfor %}
                         </form>
                         <div class="field is-horizontal">
-                            <div class="field-label is-normal">
+                            <div class="field-body is-normal">
+                                <label class="label" style="font-size: x-large"> Download Data:
+                                </label>
                             </div>
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <a class="button" href="/download">download data</a>
+                                        <a class="button is-primary" href="/download">download data</a>
                                     </div>
                                 </div>
                             </div>

@@ -5,120 +5,183 @@
             <div class="columns">
                 <div class="column is-three-fifths is-offset-one-fifth">
                     <div class="box">
-                        <form action="/reward/{{ task.id }}" method="post" accept-charset="UTF-8">
+                        <form action="/reward/{{ task.task_id }}" method="post" accept-charset="UTF-8"
+                              enctype="multipart/form-data">
                             {% csrf_token %}
 
                             <div class="columns">
                                 <div class="column is-three-quarters">
-                                    <h3 class="title is-4">{{ task.name }} </h3>
+                                    <h3 class="title is-4">{{ task.task_name }} </h3>
                                 </div>
 
                             </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Type:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.task_type }}
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">State:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.state }}
+                                </div>
+                            </div>
 
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Reward:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.reward }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Type: {{ task.task_type }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Receive Time:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.receive_time }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">State {{ task.state }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Deadline:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.deadline }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Detail {{ task.detail }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">FinalWorker:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.final_worker }}
+                                </div>
+                            </div>
 
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Requirements:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.worker_requirement }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Reward: {{ task.reward }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Detail:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.detail }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Recieve Time: {{ task.receive_time }}</h3>
-                            <h3 class="title is-5">Deadline: {{ task.deadline }}</h3>
-
-                            <h3 class="title is-5">Worker: {{ task.final_worker }}</h3>
-
-
-                            <h3 class="title is-5">Requirments:{{ task.worker_requirement }}</h3>
-                            <p></p>
+                            <br><br>
 
                             {% if task.final_solution %}
 
-                            <h3 class="title is-5">Solution:</h3>
-                            <p>{{ task.final_solution }}</p>
+                                <h3 class="title is-5">Solution:</h3>
+                                <p>{{ task.final_solution }}</p>
 
-                             <div class="field info-field is-horizontal">
-                                <div class="field-label">
-                                    <label class="label">Reward Rate</label>
-                                </div>
-                                <div class="field-body">
+                                <div class="field info-field is-horizontal">
+                                    <div class="field-label">
+                                        <label class="label">Reward Rate</label>
+                                    </div>
+                                    <div class="field-body">
 
-                                        <div class="control" >
-                                            <input type="hidden"  name="workerid" value="{{ task.final_worker }}">
-                                            <input class="input" name="rate" type="number" min="0"  placeholder="rate 0-100" value="">
-                                        </div>
-
-                                </div>
-
-                            </div>
-
-
-                             <div class="field" align="center">
                                         <div class="control">
-                                            <input class="button is-primary" type="submit" name="reward" value="Reward">
+                                            <input type="hidden" name="workerid" value="{{ task.final_worker }}">
+                                            <input class="input" name="rate" type="number" min="0"
+                                                   placeholder="rate 0-100" value="">
                                         </div>
-                             </div>
+
+                                    </div>
+
+                                </div>
+
+
                                 <div class="field" align="center">
-                                        <div class="control">
-                                            <a class="button is-primary" href="/download">download solution</a>
-                                        </div>
+                                    <div class="control">
+                                        <input class="button is-primary" type="submit" name="reward" value="Reward">
+                                    </div>
                                 </div>
-                                {% else %}
+                                <div class="field" align="center">
+                                    <div class="control">
+                                        <a class="button is-primary" href="/download">download solution</a>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="columns">
+                                    <div class="column is-three-quarters">
+                                        <h3 class="title is-4">Update Data</h3>
+                                    </div>
+
+                                </div>
                                 <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Data</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input" name="data" type="text"
-                                                   placeholder="give the filepath of data" value="">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Data</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+
+                                                <input class="input" name="data" type="file"
+                                                       value="">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                                 <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Encryption</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input type="radio" name="flag" /> yes
-                                            <input type="radio" name="flag" /> no
+                                    <div class="field-label is-normal">
+                                        <label class="label">Encryption</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input type="radio" name="flag" value="yes"/> yes
+                                                <input type="radio" name="flag" value="no"/> no
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Public Key</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input" name="public_key" type="text"
-                                                   placeholder="give the filepath of public key" value="">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Public Key</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" name="public_key" type="text"
+                                                       placeholder="give the user name of public key" value="">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="button is-success" type="submit" name="update" value="Update">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="button is-success" type="submit" name="update"
+                                                       value="Update">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             {% endif %}
 
-                          <br>
+                            <br>
                         </form>
                     </div>
 

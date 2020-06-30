@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block body %}
-<section class="hero is-info is-light">
-  <div class="hero-body">
-      <div class="columns">
-          <div class="column is-10 is-offset-1">
-              <section class="hero landing-left">
-                      <div>
-                          <h3 class="title has-text-centered ">
-                              <p>Make Things Easier!</p>
-                          </h3>
-                      </div>
-              </section>
-          </div>
-      </div>
-  </div>
-  </div>
-  </section>
+    <section class="hero is-info is-light">
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column is-10 is-offset-1">
+                    <section class="hero landing-left">
+                        <div>
+                            <h3 class="title has-text-centered ">
+                                <p>Make Things Easier!</p>
+                            </h3>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
     <div class="section">
         <div class="container">
             <li class="box">
@@ -23,7 +23,7 @@
                     <div class="column is-half-desktop is-two-thirds-tablet">
                         <form class="" action="" method="post" accept-charset="UTF-8">
                             {% csrf_token %}
-{#                            <input name="authenticity_token" type="hidden" value="">#}
+                            {#                            <input name="authenticity_token" type="hidden" value="">#}
                             <br>
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
@@ -32,7 +32,8 @@
                                 <div class="field-body">
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input" name="hash" type="text" placeholder="give the hash" value="">
+                                            <input class="input" name="hash" type="text" placeholder="give the hash"
+                                                   value="">
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +45,8 @@
                                 <div class="field-body">
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input" name="filepath" type="text" placeholder="give the file path to download" value="">
+                                            <input class="input" name="filepath" type="text"
+                                                   placeholder="give the file path to download" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -56,8 +58,21 @@
                                 <div class="field-body">
                                     <div class="field">
                                         <div class="control">
-                                            <input type="radio" name="flag" /> yes
-                                            <input type="radio" name="flag" /> no
+                                            <input type="radio" name="flag" value="yes"/> yes
+                                            <input type="radio" name="flag" value="no"/> no
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Private_Key</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" name="private_key" type="text"
+                                                   placeholder="give the user name of private key" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -78,6 +93,6 @@
                 </div>
             </li>
         </div>
-      </div>
+    </div>
 
 {% endblock %}

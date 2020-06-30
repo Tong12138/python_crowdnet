@@ -30,7 +30,7 @@ urlpatterns = [
     path('release/', views.releaseView.as_view(), name='release'),
     path('details/', views.details, name='details'),
     path('task/<taskId>', views.task, name='task'),
-    path('profile/<userId>', views.profileView.as_view(), name='profile'),
+    path('profile/', views.profileView.as_view(), name='profile'),
     path('logout/', views.logout, name='logout'),
     path('jointask/<taskId>', views.jointask, name='jointask'),
     path('mytask/<taskId>', views.mytaskView.as_view(), name='mytask'),
@@ -38,6 +38,7 @@ urlpatterns = [
 
     path('private/', views.privateView.as_view(), name='private'),
     path('download/', views.download, name='download'),
+    path('others/<userId>', views.getuser, name='getuser'),
 
 
 ]

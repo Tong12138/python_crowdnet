@@ -38,15 +38,15 @@ def getAllUsers():
     getusers.restype = ctypes.c_char_p
     return getusers()
 
-def postTask(title, taskid, tasktype, detail, require, reward, recievetime, deadline, data, keypath, flag):
+def postTask(username, title, taskid, tasktype, detail, require, reward, recievetime, deadline, data, keypath, flag):
     posttask = lib.PostTask
     posttask.restype = ctypes.c_char_p
-    posttask.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
-    detail = bytes(str(detail, 'utf-8') + "\nData hash:" + str(upLoad(data, keypath, flag), 'utf-8'), encoding='utf-8')
-    result = posttask(title, taskid, tasktype, detail, reward, require, recievetime, deadline)
+    posttask.argtypes = [ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+    detail = bytes(str(detail, 'utf-8') + "\tData hash:" + str(upLoad(data, keypath, flag), 'utf-8'), encoding='utf-8')
+    result = posttask(username, title, taskid, tasktype, detail, reward, require, recievetime, deadline)
     return result
 
-def postPriTask(title, taskid, tasktype,detail, require, reward, data, keypath, userid):
+def postPriTask(title, taskid, tasktype, detail, require, reward, data, keypath, userid):
     posttask = lib.PostPriTask
     posttask.restype = ctypes.c_char_p
     posttask.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p]
@@ -55,11 +55,11 @@ def postPriTask(title, taskid, tasktype,detail, require, reward, data, keypath, 
     result = posttask(title, taskid, tasktype, detail, reward, require,userid)
     return result
 
-def recieveTask(taskid):
+def recieveTask(username, taskid):
     recievetask = lib.RecieveTask
     recievetask.restype = ctypes.c_char_p
-    recievetask.argtypes = [ctypes.c_char_p]
-    result = recievetask(taskid)
+    recievetask.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
+    result = recievetask(username, taskid)
     return result
 
 def getTask(taskid):
@@ -76,41 +76,48 @@ def getRecord(taskid):
     result = getrecord(taskid)
     return result
 
-def getUser(userid):
+def getUser(username):
     getuser = lib.GetUser
     getuser.restype = ctypes.c_char_p
-    # getuser.argtypes = [ctypes.c_char_p]
-    result = getuser()
+    getuser.argtypes = [ctypes.c_char_p]
+    result = getuser(username)
     return result
 
-def rechargeUser(number):
+def getProfile(username):
+    getprofile = lib.GetProfile
+    getprofile.restype = ctypes.c_char_p
+    getprofile.argtypes = [ctypes.c_char_p]
+    result = getprofile(username)
+    return result
+
+def rechargeUser(username, number):
     rechargeuser = lib.Recharge
     rechargeuser.restype = ctypes.c_char_p
-    rechargeuser.argtypes = [ctypes.c_char_p]
-    result = rechargeuser(number)
+    rechargeuser.argtypes = [ctypes.c_char_p,ctypes.c_char_p]
+    result = rechargeuser(username, number)
     return result
 
-def addSkills(skills):
+def addSkills(name, skills):
     addskill = lib.AddSkills
     addskill.restype = ctypes.c_char_p
-    addskill.argtypes = [ctypes.c_char_p]
-    result = addskill(skills)
+    addskill.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
+    result = addskill(name, skills)
     return result
 
-def commitTask(taskid, solution, keypath):
+def commitTask(username, taskid, solution, keypath, flag):
     committask = lib.CommitTask
     committask.restype = ctypes.c_char_p
-    committask.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
-    Hash = upLoad(solution, keypath)
-    result = committask(taskid, Hash)
+    committask.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+    Hash = upLoad(solution, keypath, flag)
+    result = committask(username, taskid, Hash)
     return result
 
 
-def reward(taskid, workerid, rate):
+def reward(username, taskid, workerid, rate):
     alloreward = lib.AlloReward
     alloreward.restype = ctypes.c_char_p
-    alloreward.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
-    result = alloreward(taskid, workerid, rate)
+    alloreward.argtypes = [ctypes.c_char_p,ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+    result = alloreward(username, taskid, workerid, rate)
     return result
 
 def upLoad(filepath, keypath, flag):
@@ -120,11 +127,11 @@ def upLoad(filepath, keypath, flag):
     result = upload(filepath, keypath, flag)
     return result
 
-def downLoad(hash, filepath, flag):
+def downLoad(hash, filepath, flag, privatepath):
     download = cdll.LoadLibrary('ipfs.so').CatIPFS
     download.restype = ctypes.c_char_p
-    download.argtype = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
-    result = download(hash, filepath, flag)
+    download.argtype = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+    result = download(hash, filepath, flag, privatepath)
     return result
 
 def updatetask(taskid, data, publickey, flag):

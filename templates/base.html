@@ -29,7 +29,7 @@
                     </div>
                     <div class="navbar-end">
                         {% if front_user %}
-                            <a class="navbar-item" href="/profile/{{ front_user }}">{{ front_user }}</a>
+                            <a class="navbar-item" href="/profile">{{ front_user }}</a>
                             <a class="navbar-item" href="/logout">Logout</a>
                         {% else %}
                             <a class="navbar-item" href="{% url 'register' %}">register</a>

@@ -2,70 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="500bdb21-7ff9-46d5-ab79-6dcf6c662a27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/developer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo" beforeDir="false" afterPath="$PROJECT_DIR$/Demo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/simpleCC.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/deprecated.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/deprecated.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/equal.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/equal.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/extensions.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/extensions.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/lib.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/lib.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/message_set.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/message_set.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_reflect.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_reflect.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/properties.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/properties.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_marshal.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_marshal.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_unmarshal.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/proto/table_unmarshal.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any/any.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/any_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration/duration.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/duration_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/empty/empty.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/empty/empty.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/struct/struct.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/struct/struct.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/timestamp_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/wrappers/wrappers.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/golang/protobuf/ptypes/wrappers/wrappers.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/attrmgr/attrmgr.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid/cid.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid/interfaces.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/identities.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/identities.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_config.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_config.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_config.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_principal.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_principal.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/hyperledger/fabric/protos/msp/msp_principal.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/appveyor.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/errors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/chaincode/vendor/github.com/pkg/errors/stack.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/fixtures/base/docker-compose-base.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/fixtures/base/docker-compose-base.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/fixtures/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/fixtures/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/chaincode/couchdb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/chaincode/couchdb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_examples_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_examples_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/mitchellh/mapstructure/mapstructure_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/sdkInit/start.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/sdkInit/start.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/service/SimpleService.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/service/SimpleService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/simpleCC.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/vendor/github.com/hyperledger/fabric-sdk-go/pkg/fab/ccpackager/gopackager/packager.go" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/vendor/github.com/hyperledger/fabric-sdk-go/pkg/fab/ccpackager/gopackager/packager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block.h" beforeDir="false" afterPath="$PROJECT_DIR$/block.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/block.so" beforeDir="false" afterPath="$PROJECT_DIR$/block.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdsourcing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowdsourcing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipfs.h" beforeDir="false" afterPath="$PROJECT_DIR$/ipfs.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipfs.so" beforeDir="false" afterPath="$PROJECT_DIR$/ipfs.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_private.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/developers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/developers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/download.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/download.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mytask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mytask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/release.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/release.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reward.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yyt_PrivateKey.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yyt_PublicKey.pem" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/crowdsourcing$test_1_.coverage" NAME="test(1) Coverage Results" MODIFIED="1593077769958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -90,49 +65,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/task.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="105" column="57" lean-forward="true" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crowdsourcing/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="285">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
               <folding>
                 <element signature="e#637#669#0" expanded="true" />
               </folding>
@@ -141,30 +77,81 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/start.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="189">
+              <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#1672#2124#0" />
+                <element signature="e#2165#2359#0" />
+                <element signature="e#2386#2533#0" />
+                <element signature="e#2562#2719#0" />
+                <element signature="e#2748#2897#0" />
+                <element signature="e#3364#3540#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/base/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="365" column="66" selection-start-line="365" selection-start-column="66" selection-end-line="365" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#500#1659#0" />
+                <element signature="e#1688#2508#0" />
+                <element signature="e#2536#2805#0" />
+                <element signature="e#3006#3257#0" />
+                <element signature="e#4517#6184#0" />
+                <element signature="e#6220#6725#0" />
+                <element signature="e#6753#7167#0" />
+                <element signature="e#7200#7801#0" />
+                <element signature="e#10184#10645#0" />
+                <element signature="e#10675#12476#0" />
+                <element signature="e#12506#14879#0" />
+                <element signature="e#14906#14966#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mytask.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="138" column="86" selection-start-line="138" selection-start-column="86" selection-end-line="138" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/download.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/reward.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="158" column="79" selection-start-line="158" selection-start-column="79" selection-end-line="158" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/form.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+              <folding>
+                <element signature="e#46#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,20 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/release.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2595">
-              <caret line="173" column="34" selection-start-line="161" selection-start-column="27" selection-end-line="173" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-              <folding>
-                <element signature="e#46#70#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="327">
+              <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -203,28 +178,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Username</find>
-      <find>return</find>
-      <find>SESSION_ENGINE</find>
-      <find>taskpost</find>
-      <find>challenge</find>
-      <find>taskquery</find>
-      <find>title</find>
-      <find>release</find>
-      <find>form</find>
-      <find>action</find>
-      <find>number</find>
-      <find>+</find>
-      <find>join</find>
-      <find>foo</find>
-      <find>getuser</find>
-      <find>ongoing</find>
-      <find>ongoin</find>
-      <find>public_key</find>
       <find>session</find>
       <find>request.session</find>
       <find>print</find>
       <find>border</find>
+      <find>save_file</find>
+      <find>download</find>
+      <find>spider</find>
+      <find>\r\</find>
+      <find>user</find>
+      <find>addSkill</find>
+      <find>posttask</find>
+      <find>post</find>
+      <find>addsk</find>
+      <find>recharge</find>
+      <find>getuser</find>
+      <find>getu</find>
+      <find>username</find>
+      <find>username =</find>
+      <find>here</find>
+      <find>update</find>
+      <find>str</find>
+      <find>profile</find>
+      <find>end</find>
+      <find>form.errors.get_json_data()</find>
+      <find>solution</find>
+      <find>form</find>
+      <find>public</find>
+      <find>flag</find>
+      <find>publ</find>
+      <find>publi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -244,35 +227,38 @@
         <option value="$PROJECT_DIR$/templates/details.html" />
         <option value="$PROJECT_DIR$/base/__init__.py" />
         <option value="$PROJECT_DIR$/base/start.py" />
-        <option value="$PROJECT_DIR$/templates/developers.html" />
-        <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/templates/profile.html" />
         <option value="$PROJECT_DIR$/Demo/sdkInit/start.go" />
         <option value="$PROJECT_DIR$/templates/private.html" />
-        <option value="$PROJECT_DIR$/crowdsourcing/urls.py" />
         <option value="$PROJECT_DIR$/crowdsourcing/settings.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/base/middlewares.py" />
-        <option value="$PROJECT_DIR$/templates/download.html" />
         <option value="$PROJECT_DIR$/Demo/main.go" />
-        <option value="$PROJECT_DIR$/templates/reward.html" />
         <option value="$PROJECT_DIR$/Demo/chaincode/simpleCC.go" />
         <option value="$PROJECT_DIR$/Demo/service/SimpleService.go" />
+        <option value="$PROJECT_DIR$/Demo/config.yaml" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/crowdsourcing/urls.py" />
+        <option value="$PROJECT_DIR$/templates/developers.html" />
+        <option value="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File/test(1).py" />
+        <option value="$PROJECT_DIR$/templates/profile.html" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/templates/developer.html" />
+        <option value="$PROJECT_DIR$/base/form.py" />
+        <option value="$PROJECT_DIR$/templates/task.html" />
+        <option value="$PROJECT_DIR$/templates/release.html" />
+        <option value="$PROJECT_DIR$/templates/download.html" />
         <option value="$PROJECT_DIR$/base/models.py" />
         <option value="$PROJECT_DIR$/templates/mytask.html" />
-        <option value="$PROJECT_DIR$/templates/release.html" />
-        <option value="$PROJECT_DIR$/base/form.py" />
+        <option value="$PROJECT_DIR$/templates/reward.html" />
         <option value="$PROJECT_DIR$/base/views.py" />
-        <option value="$PROJECT_DIR$/templates/task.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-108" />
-    <option name="y" value="84" />
-    <option name="width" value="1248" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="26" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
     <option name="height" value="803" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -281,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,12 +277,18 @@
             <path>
               <item name="crowdsourcing" type="b2602c69:ProjectViewProjectNode" />
               <item name="crowdsourcing" type="462c0819:PsiDirectoryNode" />
+              <item name="PKI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crowdsourcing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crowdsourcing" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,7 +327,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.crowdsourcing">
+    <configuration name="test(1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crowdsourcing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/myEnv/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File/test(1).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="crowdsourcing" type="Python.DjangoServer" factoryName="Django server">
       <module name="crowdsourcing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -361,6 +374,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.crowdsourcing" />
+      <item itemvalue="Python.test(1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test(1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -408,12 +430,22 @@
       <workItem from="1592226468027" duration="2242000" />
       <workItem from="1592275146998" duration="5062000" />
       <workItem from="1592293499901" duration="1750000" />
-      <workItem from="1592370231827" duration="2686000" />
+      <workItem from="1592370231827" duration="3282000" />
+      <workItem from="1592452401725" duration="921000" />
+      <workItem from="1592471753070" duration="404000" />
+      <workItem from="1592535214706" duration="3366000" />
+      <workItem from="1592639481431" duration="176000" />
+      <workItem from="1592642230278" duration="332000" />
+      <workItem from="1592984239308" duration="8845000" />
+      <workItem from="1593085280748" duration="2977000" />
+      <workItem from="1593311440461" duration="13904000" />
+      <workItem from="1593394643022" duration="13463000" />
+      <workItem from="1593487427673" duration="2855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203209000" />
+    <option name="totallyTimeSpent" value="251048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,16 +457,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-108" y="84" width="1248" height="803" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="803" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24543947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24320458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3291874" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8898426" visible="true" weight="0.5555556" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8898426" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
@@ -443,7 +475,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.11015737" side_tool="true" weight="0.38396624" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32911393" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32770744" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.28973278" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32863188" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -451,55 +483,54 @@
       <window_info anchor="right" id="Remote Host" order="3" weight="0.32981783" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3283582" />
       <window_info anchor="right" id="Database" order="5" weight="0.32885906" />
+      <window_info anchor="right" id="make" order="6" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23134328" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8898426" visible="true" weight="0.34317863" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32911393" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.11015737" side_tool="true" weight="0.38396624" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32911393" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32770744" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32863188" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32981783" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.3283582" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32885906" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File/test(1).py</url>
+          <line>129</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File/test(1).py</url>
+          <line>127</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File/test(1).py</url>
+          <line>126</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="content_dict" language="Python" />
+        <watch expression="source" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>source</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>content_dict</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dfsf/form.py" />
-    <entry file="file://$PROJECT_DIR$/crowdsourcing/asgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/opt/anaconda3/envs/myEnv/lib/python3.7/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -521,13 +552,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/web/tpl/index.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/base/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -559,9 +583,6 @@
           <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dev_register.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/details.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -608,23 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -653,73 +657,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/developers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/download.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3009">
-          <caret line="388" column="1" selection-start-line="388" selection-start-column="1" selection-end-line="388" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/reward.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="96" column="18" selection-end-line="128" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/chaincode/simpleCC.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="1089" selection-start-line="1089" selection-end-line="1089" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../修改/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="243" column="30" lean-forward="true" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../修改/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="49" column="54" selection-start-line="47" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../修改 2/mytask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="47" selection-end-line="93" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/chaincode/simpleCC.go" />
+    <entry file="file://$PROJECT_DIR$/../修改/views.py" />
+    <entry file="file://$PROJECT_DIR$/../修改/form.py" />
+    <entry file="file://$PROJECT_DIR$/../修改 2/mytask.html" />
     <entry file="file://$PROJECT_DIR$/ipfs.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mytask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -751,20 +696,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile.html">
+    <entry file="file://$PROJECT_DIR$/Demo/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crowdsourcing/urls.py">
+    <entry file="file://$PROJECT_DIR$/Demo/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#637#669#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2655">
+          <caret line="177" column="28" selection-start-line="177" selection-start-column="28" selection-end-line="177" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -782,54 +724,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/models.py">
+    <entry file="file://$PROJECT_DIR$/Demo/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="586">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/fixtures/chaincode/simpleCC.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="962" column="34" lean-forward="true" selection-start-line="938" selection-start-column="4" selection-end-line="962" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/01e70781061e8564ff96385c7be50db6/Message/MessageTemp/5e78339db077f6e09b4cefe056da6389/File/test(1).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#187#227#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/release.html">
+    <entry file="file://$PROJECT_DIR$/templates/developers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2595">
-          <caret line="173" column="34" selection-start-line="161" selection-start-column="27" selection-end-line="173" selection-end-column="34" />
+        <state relative-caret-position="379">
+          <caret line="42" column="110" selection-start-line="42" selection-start-column="110" selection-end-line="42" selection-end-column="110" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/form.py">
+    <entry file="file://$PROJECT_DIR$/templates/developer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="124">
+          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="76" column="102" selection-start-line="76" selection-start-column="102" selection-end-line="76" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crowdsourcing/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding>
-            <element signature="e#46#70#0" expanded="true" />
+            <element signature="e#637#669#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/task.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="105" column="57" lean-forward="true" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
+        <state relative-caret-position="1950">
+          <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dev_register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/release.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#1672#2124#0" />
+            <element signature="e#2165#2359#0" />
+            <element signature="e#2386#2533#0" />
+            <element signature="e#2562#2719#0" />
+            <element signature="e#2748#2897#0" />
+            <element signature="e#3364#3540#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mytask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="138" column="86" selection-start-line="138" selection-start-column="86" selection-end-line="138" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reward.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="158" column="79" selection-start-line="158" selection-start-column="79" selection-end-line="158" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding>
+            <element signature="e#46#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/base/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="191">
+          <caret line="365" column="66" selection-start-line="365" selection-start-column="66" selection-end-line="365" selection-end-column="66" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#500#1659#0" />
+            <element signature="e#1688#2508#0" />
+            <element signature="e#2536#2805#0" />
+            <element signature="e#3006#3257#0" />
+            <element signature="e#4517#6184#0" />
+            <element signature="e#6220#6725#0" />
+            <element signature="e#6753#7167#0" />
+            <element signature="e#7200#7801#0" />
+            <element signature="e#10184#10645#0" />
+            <element signature="e#10675#12476#0" />
+            <element signature="e#12506#14879#0" />
+            <element signature="e#14906#14966#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
         </state>
       </provider>
     </entry>

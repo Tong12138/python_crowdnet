@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="box">
+                        <h2 class="title is-4">Profile  </h2>
+                        <form action="" method="post" accept-charset="UTF-8">
+                            {% csrf_token %}
+                            <input name="authenticity_token" type="hidden">
+                            <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Username</label>
+                                </div>
+                                <div class="field-body">
+                                    {{ user.user_name }}
+                                </div>
+                            </div>
+
+                            <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Reputation</label>
+                                </div>
+                                <div class="field-body">
+                                    {{ user.reputation }}
+                                </div>
+                            </div>
+
+                            <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Balance</label>
+                                </div>
+                                <div class="field-body">
+                                    {{user.account_balance}}
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Info</label>
+                                </div>
+                                <div class="field-body">
+                                    {{user.detail_information}}
+                                </div>
+                            </div>
+
+                            <div class="field info-field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Skills</label>
+                                </div>
+                                <div class="field-body">
+                                    {{user.skills}}
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <br>
+                    <h3 class="title is-4">Recommend Challenge For You</h3>
+                    <div class="box">
+                        <h3 class="title is-5">Challenge A</h3>
+                        <em>No ranking yet. Vote on nominations to increase your rank.</em>
+                        <br>
+                        <br>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <a href="#">Learn more</a>
+                            </div>
+                            <div class="column is-narrow">
+                                <a href="#">👍 Vote on nominations</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h3 class="title is-5">Challenge B</h3>
+                        <em>No ranking yet. Vote on nominations to increase your rank.</em>
+                        <br>
+                        <br>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <a href="#">Learn more</a>
+                            </div>
+                            <div class="column is-narrow">
+                                <a href="#">👍 Vote on nominations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="title is-4">Your History</h2>
+                    <h3 class="title is-5" > &nbsp posted tasks</h3>
+                    {% for task in user.post_tasks %}
+                        <div class="box">
+                        <a class="title is-5" href="/reward/{{ task }}">{{task}}</a>
+                            <br><br>
+                        <p>release time: {{ task.deadline }}</p>
+                    </div>
+                    {% endfor %}
+
+                 <h3 class="title is-5" > &nbsp ongoing tasks</h3>
+                    {% for task in user.ongoing_tasks %}
+                        <div class="box">
+                        <a class="title is-5" href="/mytask/{{ task }}">{{task}}</a>
+                        <br>
+                        <p>release time: {{ task.deadline }}</p>
+                    </div>
+                    {% endfor %}
+
+                 <h3 class="title is-5" > &nbsp completed tasks</h3>
+                    {% for task in user.complete_tasks %}
+                        <div class="box">
+                        <a class="title is-5" href="">{{task}}</a>
+                        <br>
+                        <p>release time: {{ task.deadline }}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

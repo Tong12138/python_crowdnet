@@ -19,6 +19,12 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 /* Start of preamble from import "C" comments.  */
 
 
+#line 5 "main.go"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#line 1 "cgo-generated-wrapper"
 
 
 /* End of preamble from import "C" comments.  */
@@ -79,15 +85,15 @@ extern char* Enroll(char* p0, char* p1, char* p2);
 
 extern char* Login(char* p0);
 
-extern char* PostTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5, char* p6, char* p7);
+extern char* PostTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5, char* p6, char* p7, char* p8);
 
 extern char* PostPriTask(char* p0, char* p1, char* p2, char* p3, char* p4, char* p5, char* p6);
 
-extern char* RecieveTask(char* p0);
+extern char* RecieveTask(char* p0, char* p1);
 
-extern char* CommitTask(char* p0, char* p1);
+extern char* CommitTask(char* p0, char* p1, char* p2);
 
-extern char* AlloReward(char* p0, char* p1, char* p2);
+extern char* AlloReward(char* p0, char* p1, char* p2, char* p3);
 
 extern char* GetTask(char* p0);
 
@@ -95,11 +101,13 @@ extern char* GetRecord(char* p0);
 
 extern char* GetAllTasks();
 
-extern char* Recharge(char* p0);
+extern char* Recharge(char* p0, char* p1);
 
-extern char* AddSkills(char* p0);
+extern char* AddSkills(char* p0, char* p1);
 
-extern char* GetUser();
+extern char* GetUser(char* p0);
+
+extern char* GetProfile(char* p0);
 
 extern char* GetAllUsers();
 

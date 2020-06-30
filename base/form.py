@@ -17,6 +17,12 @@ class loginForm(forms.Form):
         cleaned_data = super(loginForm, self).clean()
         return cleaned_data
 
+class profileForm(forms.Form):
+    recharge = forms.CharField(required=False)
+    skills = forms.CharField(required=False)
+    def clean(self):
+        cleaned_data = super(profileForm, self).clean()
+        return cleaned_data
 
 class taskForm(forms.Form):
     title = forms.CharField()
@@ -30,21 +36,13 @@ class taskForm(forms.Form):
     data = forms.FileField()
     flag = forms.CharField()
     public_key = forms.CharField()
-    # flag = forms.CharField()
-
     def clean(self):
         cleaned_data = super(taskForm, self).clean()
         return cleaned_data
 
-class profileForm(forms.Form):
-    recharge = forms.CharField(required=False)
-    skills = forms.CharField(required=False)
-    def clean(self):
-        cleaned_data = super(profileForm, self).clean()
-        return cleaned_data
-
 class commitForm(forms.Form):
-    solution = forms.CharField()
+    solution = forms.FileField()
+    flag = forms.CharField()
     public_key = forms.CharField()
     def clean(self):
         cleaned_data = super(commitForm, self).clean()

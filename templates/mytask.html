@@ -5,85 +5,173 @@
             <div class="columns">
                 <div class="column is-three-fifths is-offset-one-fifth">
                     <div class="box">
-                        <form action="/mytask/{{ task.id }}" method="post" accept-charset="UTF-8">
+                        <form action="/mytask/{{ task.task_id }}" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                             {% csrf_token %}
 
                             <div class="columns">
                                 <div class="column is-three-quarters">
-                                    <h3 class="title is-4">{{ task.name }} </h3>
+                                    <h3 class="title is-4">{{ task.task_name }} </h3>
                                 </div>
-{#                                <div class="column">#}
-{#                                    <div class="field">#}
-{#                                        <div class="control">#}
-{#                                            <input class="button is-primary" type="submit" value="Join">#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
                             </div>
 
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Type:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.task_type }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Type: {{ task.task_type }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">State:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.state }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">State: {{ task.state }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Reward:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.reward }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Detail: {{ task.detail }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Worker:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.final_worker }}
+                                </div>
+                            </div>
 
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Deadline:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.deadline }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Reward: {{ task.reward }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Requirements:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.worker_requirement }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Worker: {{ task.final_worker }}</h3>
-                            <h3 class="title is-5">Deadline: {{ task.deadline }}</h3>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <label class="label">Detail:</label>
+                                </div>
+                                <div class="field-body ">
+                                    {{ task.detail }}
+                                </div>
+                            </div>
 
-                            <h3 class="title is-5">Requirments</h3>
-                            <p>{{ task.worker_requirement }}</p>
-                        <br>
+                            <br><br>
                             {% if task.final_solution %}
-                            <h3 class="title is-5">FinalSolution</h3>
-                            <p>{{ task.final_solution }}</p>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <label class="label">FinalSolution:</label>
+                                    </div>
+                                    <div class="field-body ">
+                                        {{ task.final_solution }}
+                                    </div>
+                                </div>
                                 <br>
                             {% else %}
-                             <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Solutions</label>
-                                </div>
-                                <div class="field-body">
-                                <div class="field">
-                                    <div class="control">
-                                        <input class="input" name="solution" type="text" placeholder="give the filepath of solution" value="">
-                                    </div>
-                                </div>
-                                </div>
-                                 {#  #}
-                                   {# <textarea class="textarea" name="solution" placeholder="your solution"></textarea> #}
-                             </div>
-                             <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Public Key</label>
-                                </div>
-                                <div class="field-body">
-                                <div class="field">
-                                    <div class="control">
-                                        <input class="input" name="public_key" type="text" placeholder="give the filepath of public key" value="">
-                                    </div>
-                                </div>
-                                </div>
-                                 {#  #}
-                                   {# <textarea class="textarea" name="solution" placeholder="your solution"></textarea> #}
-                             </div>
+                                <h3 class="title is-4">Commit </h3>
 
-                             <div class="field" align="center">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Solutions</label>
+                                    </div>
+                                     <div class="field-body">
+                                    <div class="field">
                                         <div class="control">
-                                            <input class="button is-primary" type="submit" value="Commit">
+                                            <input class="input" name="solution" type="file"
+                                                   value="">
                                         </div>
-                             </div>
-                                <div class="field" align="center">
+                                    </div>
+                                </div>
+
+{#                                    <div class="field-body">#}
+{#                                        <div class="field">#}
+{#                                            <div class="control">#}
+{#                                                <input class="input" name="solution" type="text"#}
+{#                                                       placeholder="give the filepath of solution" value="">#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+                                </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Encryption</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
                                         <div class="control">
-                                            <a class="button is-primary" href="/download">download solution</a>
+                                            <input type="radio" name="flag" value="yes"/> yes
+                                            <input type="radio" name="flag" value="no"/> no
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Public Key</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" name="public_key" type="text"
+                                                       placeholder="give the user name of public key" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <div class="content is-small">
+                                                <span class="gradient-highlight">Please note that all submitted products go through an approval process.</span>
+                                            </div>
+                                            <input class="button is-success" type="submit" value="Commit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+<br>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Download</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <a class="button is-success" href="/download">download solution</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             {% endif %}
 
-                          <br>
+                            <br>
                         </form>
                     </div>
 
